@@ -1,12 +1,8 @@
 class node:
-    #r: r-ary node (has r edges)
     #edges: list of other nodes max length should be r
     #probability: probability of this symbol occuring
     #symbol: symbol
-    def __init__(self, r, edges, probability, symbol):
-        if r < len(edges):
-            raise Exception("More edges than r, r=" + r + " edges = ", edges)
-        self.r = r
+    def __init__(self, edges, probability, symbol):
         self.edges = edges
         self.probability = probability
         self.symbol =  symbol
