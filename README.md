@@ -2,3 +2,4 @@
 An r-ary Huffman Encoding Algorithm.
 
 # How to run
+ `python tests.py`

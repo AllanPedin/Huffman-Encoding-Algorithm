@@ -2,13 +2,18 @@ import huffman
 import node
 
 def testHuffman(r, probability_distribution):
-    print("TEST CASE::::", r, probability_distribution, len(probability_distribution))
+    print_new_test_case(r, probability_distribution)
     encoder = huffman.Huffman_Encoder(r)
     encoder.buildTree(probability_distribution)
-    node.print_tree(encoder.tree_base, 0)
+    # node.print_tree(encoder.tree_base, 0) #good for debugging
     encoder.encode()
     print(encoder.encoding)
 
+def print_new_test_case(r, probability_distribution):
+    print("-------TEST CASE-------")
+    print("r = ", r)
+    print("pdist = ", probability_distribution)
+    print("Encoding:\n")
 tests = [
     #(r, probability_distribution)
     (2,[0.44,0.21,0.12,0.1,0.07]),
